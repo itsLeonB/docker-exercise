@@ -1,11 +1,8 @@
 import express from 'express'
 import mariadb from 'mariadb'
-import * as dotenv from 'dotenv' // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
 
 const app = express()
 const port = 3000
-
-dotenv.config()
 
 app.get('/', (req, res) => {
     const pool = mariadb.createPool({
